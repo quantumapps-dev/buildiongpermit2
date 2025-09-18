@@ -1,8 +1,14 @@
 "use client"
 
 import { DogRegistrationWizard } from "@/components/dog-registration-wizard"
+import { usePageTracking } from "@/hooks/use-tracking"
 
 export default function Home() {
+  usePageTracking("dog_registration_home", {
+    page_type: "form_page",
+    form_name: "dog_registration",
+  })
+
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto py-8 px-4">
