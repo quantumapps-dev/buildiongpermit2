@@ -1,13 +1,19 @@
-"use client";
+"use client"
+
+import { DogRegistrationWizard } from "@/components/dog-registration-wizard"
 
 export default function Home() {
-
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="flex h-screen">
-        {/* Main Content Area */}
-        <p> Generating your application.... It takes upto 5 minutes. Please refresh the browser if you don't see any updates in a few minutes</p>
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-foreground mb-2">Building Permit Application</h1>
+            <p className="text-muted-foreground">Complete your dog registration in a few simple steps</p>
+          </div>
+          <DogRegistrationWizard />
+        </div>
       </div>
     </div>
-  );
+  )
 }
